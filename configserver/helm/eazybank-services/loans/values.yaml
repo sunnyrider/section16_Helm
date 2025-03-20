@@ -1,0 +1,46 @@
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+appDeploymentName: loans-deployment
+appServiceName: loans
+appLabel: loans
+appName: loans
+
+appReplicaCount: 1
+
+image:
+  repository: sunnyrider/loans
+  tag: s14kafka
+
+appContainerPort: 8090
+
+appname_enabled: true
+profile_enabled: true
+config_enabled: true
+eureka_enabled: true
+resouceserver_enabled: false
+otel_enabled: true
+kafka_enabled: true
+mysqldb_enabled: true
+springDataRedis_enabled: false
+
+service:
+  type: ClusterIP
+  port: 8090
+  targetPort: 8090
+
+mysqlDatabaseName: loansdb
+mysqlDeploymentName: loansdb-deployment
+mysqlContainerName: loansdb-container
+mysqlServiceName: loansdb-service
+mysqlPvc: loansdb-pvc
+mysqlPv: loansdb-pv
+mysqlReplicaCount: 1
+mysqlContainerPort: 3307
+
+mysqlVolumePersistentVolumeClaimStorageSize: 500Mi  #1Gi
+
+mysqlVolumePersistentVolumeStorageSize: 500Mi  #1Gi
+mysqlVolumePersistentVolumeHostPath: /var/lib/mysql  # Replace this with the actual path on your host machine
+
+mysqlVolumeMountPath: /var/lib/mysql

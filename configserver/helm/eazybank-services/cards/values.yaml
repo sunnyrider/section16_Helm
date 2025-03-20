@@ -1,0 +1,46 @@
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+appDeploymentName: cards-deployment
+appServiceName: cards
+appLabel: cards
+appName: cards
+
+appReplicaCount: 1
+
+image:
+  repository: sunnyrider/cards
+  tag: s14kafka
+
+appContainerPort: 9000
+
+appname_enabled: true
+profile_enabled: true
+config_enabled: true
+eureka_enabled: true
+resouceserver_enabled: false
+otel_enabled: true
+kafka_enabled: true
+mysqldb_enabled: true
+springDataRedis_enabled: false
+
+service:
+  type: ClusterIP
+  port: 9000
+  targetPort: 9000
+
+mysqlDatabaseName: cardsdb
+mysqlDeploymentName: cardsdb-deployment
+mysqlContainerName: cardsdb-container
+mysqlServiceName: cardsdb-service
+mysqlPvc: cardsdb-pvc
+mysqlPv: cardsdb-pv
+mysqlReplicaCount: 1
+mysqlContainerPort: 3308
+
+mysqlVolumePersistentVolumeClaimStorageSize: 500Mi  #1Gi
+
+mysqlVolumePersistentVolumeStorageSize: 500Mi  #1Gi
+mysqlVolumePersistentVolumeHostPath: /var/lib/mysql  # Replace this with the actual path on your host machine
+
+mysqlVolumeMountPath: /var/lib/mysql

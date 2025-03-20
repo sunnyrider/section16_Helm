@@ -1,0 +1,30 @@
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+appDeploymentName: gatewayserver-deployment
+appServiceName: gatewayserver
+appLabel: gatewayserver
+appName: gatewayserver
+
+appReplicaCount: 1
+
+image:
+  repository: sunnyrider/gatewayserver
+  tag: s14kafka
+
+appContainerPort: 8072
+
+appname_enabled: true
+profile_enabled: true
+config_enabled: true
+eureka_enabled: true
+resouceserver_enabled: false
+otel_enabled: true
+kafka_enabled: false
+mysqldb_enabled: false
+springDataRedis_enabled: true
+
+service:
+  type: LoadBalancer
+  port: 8072
+  targetPort: 8072

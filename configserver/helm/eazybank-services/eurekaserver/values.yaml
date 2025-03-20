@@ -1,0 +1,30 @@
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+appDeploymentName: eurekaserver-deployment
+appServiceName: eurekaserver
+appLabel: eurekaserver
+appName: eurekaserver
+
+appReplicaCount: 1
+
+image:
+  repository: sunnyrider/eurekaserver
+  tag: s14kafka
+
+appContainerPort: 8070
+
+appname_enabled: true
+profile_enabled: false
+config_enabled: true
+eureka_enabled: false
+resouceserver_enabled: false
+otel_enabled: true
+kafka_enabled: false
+mysqldb_enabled: false
+springDataRedis_enabled: false
+
+service:
+  type: ClusterIP
+  port: 8070
+  targetPort: 8070

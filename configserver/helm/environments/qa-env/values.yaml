@@ -1,0 +1,19 @@
+global:
+  configMapName: eazybankqa-configmap
+  activeProfile: qa
+  configServerURL: configserver:http://configserver:8071/
+  eurekaServerURL: http://eurekaserver:8070/eureka/
+  keyCloakURL: http://keycloak.default.svc.cluster.local:80/realms/master/protocol/openid-connect/certs
+  openTelemetryJavaAgent: "-javaagent:/app/libs/opentelemetry-javaagent-2.11.0.jar"
+  otelExporterEndPoint: http://tempo-grafana-tempo-distributor:4318
+  otelMetricsExporter: none
+  otelLogsExporter: none
+  kafkaBrokerURL: kafka-controller-0.kafka-controller-headless.default.svc.cluster.local:9092
+  springDatasourceUsername: root
+  springDatasourcePassword: root
+  mysqlRootPassword: root
+  springDatasourceUrl: jdbc:mysql://accountsdb:3306/accountsdb&characterEncoding=UTF-8&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true
+  springDataRedisConnectTimeout: 2s
+  springDataRedisHost: redis
+  springDataRedisPort: 6379
+  springDataRedisTimeout: 1s
