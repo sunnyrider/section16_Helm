@@ -28,19 +28,3 @@ service:
   type: ClusterIP
   port: 8083
   targetPort: 8083
-
-mysqlDatabaseName: accountsdb
-mysqlDeploymentName: accountsdb-deployment
-mysqlContainerName: accountsdb-container
-mysqlServiceName: accountsdb-service
-mysqlPvc: accountsdb-pvc
-mysqlPv: accountsdb-pv
-mysqlReplicaCount: 1
-mysqlContainerPort: 3306
-
-mysqlVolumePersistentVolumeClaimStorageSize: 500Mi  #1Gi
-
-mysqlVolumePersistentVolumeStorageSize: 500Mi  #1Gi
-mysqlVolumePersistentVolumeHostPath: /var/lib/mysql  # Replace this with the actual path on your host machine
-
-mysqlVolumeMountPath: /var/lib/mysql

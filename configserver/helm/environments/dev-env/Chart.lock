@@ -2,6 +2,15 @@ dependencies:
 - name: eazybank-common
   repository: file://../../eazybank-common
   version: 0.1.0
+- name: accountsdb
+  repository: file://../../databases/accountsdb
+  version: 0.1.0
+- name: cardsdb
+  repository: file://../../databases/cardsdb
+  version: 0.1.0
+- name: loansdb
+  repository: file://../../databases/loansdb
+  version: 0.1.0
 - name: configserver
   repository: file://../../eazybank-services/configserver
   version: 0.1.0
@@ -23,5 +32,5 @@ dependencies:
 - name: message
   repository: file://../../eazybank-services/message
   version: 0.1.0
-digest: sha256:d9aec855311f72286a711322734358fd90d61e7ab0e8ef80dea05b637e020544
-generated: "2023-09-01T12:06:31.531688+05:30"
+digest: sha256:a0c0b77b9ea560fcd59a6903346369ef0f7236528bc0e53e2909ea7b55a1b4a9
+generated: "2025-03-20T13:35:02.6012181+01:00"

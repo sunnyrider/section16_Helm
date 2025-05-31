@@ -1,0 +1,20 @@
+# Default values for cardsdb.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+mysqlDatabaseName: cardsdb
+mysqlDeploymentName: cardsdb-deployment
+mysqlContainerName: cardsdb-container
+mysqlServiceName: cardsdb-service
+mysqlPvc: cardsdb-pvc
+mysqlPv: cardsdb-pv
+mysqlReplicaCount: 1
+mysqlContainerPort: 3308
+
+mysqlVolumePersistentVolumeClaimStorageSize: 500Mi  #1Gi
+
+mysqlVolumePersistentVolumeStorageSize: 500Mi  #1Gi
+mysqlVolumePersistentVolumeHostPath: /var/lib/mysql  # Replace this with the actual path on your host machine
+
+mysqlPersistentStorageName: cards_data
+mysqlVolumeMountPath: /var/lib/mysql

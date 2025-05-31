@@ -1,3 +1,4 @@
+{{- define "common.mysql-pv" -}}
 apiVersion: v1
 kind: PersistentVolume
 metadata:
@@ -9,3 +10,4 @@ spec:
     - ReadWriteOnce
   hostPath:
     path: {{ .Values.mysqlVolumePersistentVolumeHostPath }}
+{{- end -}}

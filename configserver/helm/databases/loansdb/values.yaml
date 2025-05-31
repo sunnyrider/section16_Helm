@@ -1,0 +1,20 @@
+# Default values for loansdb.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+mysqlDatabaseName: loansdb
+mysqlDeploymentName: loansdb-deployment
+mysqlContainerName: loansdb-container
+mysqlServiceName: loansdb-service
+mysqlPvc: loansdb-pvc
+mysqlPv: loansdb-pv
+mysqlReplicaCount: 1
+mysqlContainerPort: 3307
+
+mysqlVolumePersistentVolumeClaimStorageSize: 500Mi  #1Gi
+
+mysqlVolumePersistentVolumeStorageSize: 500Mi  #1Gi
+mysqlVolumePersistentVolumeHostPath: /var/lib/mysql  # Replace this with the actual path on your host machine
+
+mysqlPersistentStorageName: loans_data
+mysqlVolumeMountPath: /var/lib/mysql

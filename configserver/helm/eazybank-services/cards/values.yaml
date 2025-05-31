@@ -28,19 +28,3 @@ service:
   type: ClusterIP
   port: 9000
   targetPort: 9000
-
-mysqlDatabaseName: cardsdb
-mysqlDeploymentName: cardsdb-deployment
-mysqlContainerName: cardsdb-container
-mysqlServiceName: cardsdb-service
-mysqlPvc: cardsdb-pvc
-mysqlPv: cardsdb-pv
-mysqlReplicaCount: 1
-mysqlContainerPort: 3308
-
-mysqlVolumePersistentVolumeClaimStorageSize: 500Mi  #1Gi
-
-mysqlVolumePersistentVolumeStorageSize: 500Mi  #1Gi
-mysqlVolumePersistentVolumeHostPath: /var/lib/mysql  # Replace this with the actual path on your host machine
-
-mysqlVolumeMountPath: /var/lib/mysql

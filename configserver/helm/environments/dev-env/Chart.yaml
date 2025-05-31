@@ -28,6 +28,18 @@ dependencies:
     version: 0.1.0
     repository: file://../../eazybank-common
 
+  - name: accountsdb
+    version: 0.1.0
+    repository: file://../../databases/accountsdb
+
+  - name: cardsdb
+    version: 0.1.0
+    repository: file://../../databases/cardsdb
+
+  - name: loansdb
+    version: 0.1.0
+    repository: file://../../databases/loansdb
+
   - name: configserver
     version: 0.1.0
     repository: file://../../eazybank-services/configserver

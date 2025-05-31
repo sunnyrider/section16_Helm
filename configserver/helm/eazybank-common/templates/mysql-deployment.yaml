@@ -1,3 +1,4 @@
+{{- define "common.mysql-deployment" -}}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -36,9 +37,10 @@ spec:
             ports:
               - containerPort: {{ .Values.mysqlContainerPort }}
             volumeMounts:
-              - name: persistent-storage
+              - name: {{ .Values.mysqlPersistentStorageName }}
                 mountPath: {{ .Values.mysqlVolumeMountPath }}
       volumes:
-        - name: persistent-storage
+        - name: {{ .Values.mysqlPersistentStorageName }}
           persistentVolumeClaim:
             claimName: {{ .Values.mysqlPvc }}
+{{- end -}}

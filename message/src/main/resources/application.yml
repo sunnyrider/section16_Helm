@@ -8,16 +8,21 @@ spring:
     function:
       definition: email|sms
     stream:
-      default-binder: kafka
+#      default-binder: kafka
       bindings:
         emailsms-in-0:
           destination: send-communication
           group: ${spring.application.name}
-          binder: kafka
+#          binder: kafka
         emailsms-out-0:
           destination: communication-sent
-          binder: kafka
-      kafka:
-        binder:
-          brokers:
-            - localhost:9092
+#          binder: kafka
+#      kafka:
+#        binder:
+#          brokers:
+#            - localhost:9092
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: "guest"
+    password: "guest"
